@@ -15,6 +15,9 @@ source.
 - [onboard-kit](https://github.com/Kabelo-Theko/onboard-kit) — generates a full
   IT onboarding pack from a new starter's details. Live:
   https://onboard-kit-eta.vercel.app/
+- [resolve-notes](https://github.com/Kabelo-Theko/resolve-notes) — turns a
+  resolved ticket into a knowledge base article (AI, with a Flash/Pro/MiniMax
+  model toggle and a Supabase-ready library).
 
 ## Running it
 
