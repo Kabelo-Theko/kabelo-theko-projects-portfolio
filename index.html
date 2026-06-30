@@ -20,9 +20,10 @@
   body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.55;
     background-image:radial-gradient(rgba(22,24,29,.015) 1px,transparent 1px);background-size:4px 4px}
   body::before{content:"";position:fixed;inset:-12%;z-index:-1;pointer-events:none;
-    background:radial-gradient(38% 38% at 12% 16%, rgba(14,110,99,.18), transparent 70%),
-      radial-gradient(42% 42% at 88% 72%, rgba(212,128,90,.15), transparent 70%),
-      radial-gradient(34% 34% at 62% 30%, rgba(14,110,99,.10), transparent 70%)}
+    background:radial-gradient(40% 40% at 10% 12%, rgba(14,110,99,.22), transparent 68%),
+      radial-gradient(44% 44% at 90% 70%, rgba(212,128,90,.20), transparent 70%),
+      radial-gradient(36% 36% at 64% 26%, rgba(14,110,99,.12), transparent 70%),
+      radial-gradient(30% 30% at 28% 86%, rgba(212,128,90,.13), transparent 72%)}
   .wrap{max-width:1000px;margin:0 auto;padding:0 28px}
   a{color:inherit}
   header{padding:60px 0 22px}
@@ -45,13 +46,15 @@
   .ctitle{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:25px;letter-spacing:-.01em;margin:8px 0 0}
   .cblurb{font-size:15px;color:var(--soft);max-width:68ch;margin:8px 0 0}
   .flow{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}
-  .stg{flex:1;min-width:116px;display:flex;flex-direction:column;background:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.6);border-left:2px solid var(--accent);border-radius:12px;padding:13px 15px;text-decoration:none;-webkit-backdrop-filter:blur(10px) saturate(1.3);backdrop-filter:blur(10px) saturate(1.3)}
+  .stg{position:relative;flex:1;min-width:116px;display:flex;flex-direction:column;background:rgba(255,255,255,.40);border:0;border-left:2px solid var(--accent);border-radius:12px;padding:13px 15px;text-decoration:none;-webkit-backdrop-filter:blur(18px) saturate(170%);backdrop-filter:blur(18px) saturate(170%);box-shadow:0 1px 1px rgba(22,24,29,.04),0 12px 28px -18px rgba(22,24,29,.28),inset 0 1px 0 rgba(255,255,255,.75)}
+  .stg::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.2) 38%,rgba(255,255,255,0) 60%,rgba(255,255,255,.35));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
   .stg .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent)}
   .stg .t{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:17px;margin-top:2px}
   .stg .d{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--mute);margin-top:1px}
   .stg:hover{border-color:var(--accent)}
   .arr{display:flex;align-items:center;color:var(--mute);font-size:22px}
-  .proj{background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.65);border-radius:var(--radius);box-shadow:0 1px 2px rgba(22,24,29,.04),0 26px 52px -28px rgba(22,24,29,.42);padding:24px;margin-top:20px;-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4)}
+  .proj{position:relative;background:rgba(255,255,255,.46);border:0;border-radius:var(--radius);padding:24px;margin-top:20px;-webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);box-shadow:0 1px 1px rgba(22,24,29,.04),0 22px 48px -24px rgba(22,24,29,.30),inset 0 1px 0 rgba(255,255,255,.8),inset 0 0 0 .5px rgba(255,255,255,.4)}
+  .proj::after{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(255,255,255,.30) 32%,rgba(255,255,255,0) 52%,rgba(255,255,255,.45));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
   .phead{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}
   .phead h2{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em;margin:0}
   .bf{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
@@ -87,7 +90,9 @@
     .js .shot img{transform:none}
   }
   @media print{.reveal{opacity:1!important;transform:none!important}.shot img{transform:none!important}}
-  @media (max-width:620px){.arr{display:none}.stg{min-width:0;flex:1 1 44%}}
+  @media (max-width:620px){.arr{display:none}.stg{min-width:0;flex:1 1 44%}
+    .proj{-webkit-backdrop-filter:blur(14px) saturate(170%);backdrop-filter:blur(14px) saturate(170%)}
+    .stg{-webkit-backdrop-filter:blur(12px) saturate(160%);backdrop-filter:blur(12px) saturate(160%)}}
 </style>
 </head>
 <body>
