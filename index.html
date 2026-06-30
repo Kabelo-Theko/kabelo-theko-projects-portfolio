@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kabelo Theko — IT Support Technician</title>
-<meta name="description" content="IT support technician. Three small, working tools for the first-line support loop." />
+<title>Kabelo Theko, IT Support Technician</title>
+<meta name="description" content="IT support technician. Four small, working tools that form one IT support lifecycle: onboard, triage, diagnose, resolve." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -32,6 +32,16 @@
   .rule{height:1px;background:var(--line);margin:40px 0 0}
   /* section label */
   .seclabel{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin:40px 0 0}
+  .companion{margin-top:22px}
+  .cnote{font-size:15px;color:var(--soft);max-width:66ch;margin:10px 0 0}
+  .flow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap;margin:18px 0 0}
+  .stage{flex:1;min-width:118px;display:flex;flex-direction:column;gap:2px;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:border-color var(--motion)}
+  .stage:hover{border-color:var(--accent)}
+  .stage .sn{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent)}
+  .stage .st{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:18px;color:var(--ink)}
+  .stage .sd{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--mute)}
+  .arrow{display:flex;align-items:center;color:var(--mute);font-size:22px}
+  @media (max-width:620px){.arrow{display:none}.stage{min-width:0;flex:1 1 44%}}
   /* project */
   .proj{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;margin-top:22px}
   .phead{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
@@ -61,7 +71,7 @@
     <div class="kicker">Portfolio · 2026</div>
     <h1>Kabelo Theko</h1>
     <p class="role">IT Support Technician · Gauteng, South Africa</p>
-    <p class="pitch">I fix the workflow, not just the ticket. Alongside first-line support work I build small, dependable tools for the everyday support loop. The three below are <b>rule-based and tested</b>, so I can explain and defend every decision they make. Each one runs in the browser, and the code is on GitHub.</p>
+    <p class="pitch">I fix the workflow, not just the ticket. Alongside first-line support work I build small, dependable tools for the everyday support loop. The four below form <b>one lifecycle</b>: onboard a starter, triage the inbox, diagnose a fault, then write up the fix, and they hand off to each other. They are <b>rule-based and tested</b>, with optional AI only at the edges, so I can explain and defend every decision they make. Each one runs in the browser, and the code is on GitHub.</p>
     <div class="contact">
       <span class="cchip"><a href="mailto:mr.theko.kabelo@gmail.com">mr.theko.kabelo@gmail.com</a></span>
       <span class="cchip">+27 71 673 8549</span>
@@ -70,7 +80,19 @@
       <span class="cchip">AZ-900 · Code C1</span>
     </div>
     <div class="rule"></div>
-    <div class="seclabel">Selected work — the first-line support loop, end to end</div>
+    <div class="seclabel">Selected work: the first-line support loop, end to end</div>
+    <section class="companion">
+      <p class="cnote">Four tools, one loop. Each step hands off to the next: a triaged ticket opens the diagnostic pre-filled by store and symptom, and a resolved fault is saved back as a knowledge article the next technician can find.</p>
+      <div class="flow">
+        <a class="stage" href="https://onboard-kit-eta.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="sn">01</span><span class="st">Onboard</span><span class="sd">onboard-kit</span></a>
+        <span class="arrow">&rsaquo;</span>
+        <a class="stage" href="https://ticket-triage-nu.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="sn">02</span><span class="st">Triage</span><span class="sd">ticket-triage</span></a>
+        <span class="arrow">&rsaquo;</span>
+        <a class="stage" href="https://net-doctor-nu.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="sn">03</span><span class="st">Diagnose</span><span class="sd">net-doctor</span></a>
+        <span class="arrow">&rsaquo;</span>
+        <a class="stage" href="https://resolve-notes-q83m.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="sn">04</span><span class="st">Resolve</span><span class="sd">resolve-notes</span></a>
+      </div>
+    </section>
   </header>
 
   <main>
@@ -132,7 +154,7 @@
       <p class="pdesc">Closes the support loop: turns a resolved ticket into a clean knowledge base article (symptoms, root cause, fix steps, prevention, tags) so the next technician does not start from scratch. The structure is enforced by the app; the wording is generated through a serverless AI proxy with a model toggle across DeepSeek and MiniMax, and a Supabase-ready library.</p>
       <div class="plinks">
         <a class="btn primary" href="https://resolve-notes-q83m.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
-        <a class="btn ghost" href="https://github.com/Kabelo-Theko/resolve-notes" target="_blank" rel="noopener noreferrer">Source on GitHub</a>
+        <a class="btn ghost" href="https://github.com/Kabelo-Theko/resolve-notes-" target="_blank" rel="noopener noreferrer">Source on GitHub</a>
       </div>
     </article>
   </main>
