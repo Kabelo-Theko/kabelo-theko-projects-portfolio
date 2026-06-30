@@ -189,9 +189,9 @@
       function frame(now){
         var t=(now-t0)/1000;
         if(now-lastMove>1200){ cx*=0.95; cy*=0.95; }
-        var tgX=Math.sin(t*0.17)*3.0 + cx*7.5;
-        var tgY=Math.cos(t*0.13)*2.4 + cy*6.5;
-        tx+=(tgX-tx)*0.06; ty+=(tgY-ty)*0.06;
+        var tgX=Math.sin(t*0.20)*4.4 + cx*11.5;
+        var tgY=Math.cos(t*0.16)*3.6 + cy*10.5;
+        tx+=(tgX-tx)*0.10; ty+=(tgY-ty)*0.10;
         b1.style.transform="translate3d("+tx.toFixed(2)+"vw,"+ty.toFixed(2)+"vw,0)";
         requestAnimationFrame(frame);
       }
